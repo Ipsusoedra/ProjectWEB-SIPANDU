@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap");
+:root {
+  /* color */
+  --body-color: #f3efe9;
+  --main-color: #f5f0bb;
+  --secondary-color: #61481c;
+  --heading-color: #ffffff;
+  --button-color: #7d9d9c;
+  --navbar-color: #e0dad2;
+  --navbar-text-color: #576f72;
+  --button-text-color: #f0ebe3;
+  --card-detail-color: #611c5e;
+  /* font */
+  --body-font: "Poppins", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--body-color);
+  font-family: var(--body-font);
+}
+
+.section-login-kwarcab {
+  background-image: url(/assets/img/01HalamanLogin/kwarcab-login.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--secondary-color);
+}
+.section-login-kwarran {
+  background-image: url(/assets/img/01HalamanLogin/kwarran-login.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--secondary-color);
+}
+.login-column {
+  background-color: var(--body-color);
+}
+.btn-login {
+  background: var(--button-color);
+  border-radius: 10px;
+  color: var(--button-text-color);
+}
+.sipandu {
+  font-weight: 700;
+}
+.logo-sipandu img {
+  width: 100%;
+}
+.kwarcab,
+.form-label,
+.footer-text {
+  font-weight: 500;
+}
+.signup a,
+.forget-password {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+/* contact start */
+.contact img {
+  width: 70px;
+  height: 60px;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  overflow: hidden;
+}
+.contact img:hover {
+  width: 90px;
+  height: 80px;
+  transition: all 0.2s ease;
+}
+/* contact end */
+
+/* Responsive start */
+@media screen and (min-width: 1444px) {
+}
+
+@media screen and (min-width: 992px) {
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (min-width: 601px) {
+}
+@media screen and (max-width: 600px) {
+}
+
+/* Responsive end */

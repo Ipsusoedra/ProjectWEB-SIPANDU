@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap");
+:root {
+  /* color */
+  --body-color: #f3efe9;
+  --main-color: #f5f0bb;
+  --secondary-color: #61481c;
+  --heading-color: #ffffff;
+  --button-color: #7d9d9c;
+  --navbar-color: #e0dad2;
+  --navbar-text-color: #576f72;
+  --button-text-color: #f0ebe3;
+  --card-detail-color: #611c5e;
+  /* font */
+  --body-font: "Poppins", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--body-color);
+  font-family: var(--body-font);
+}
+
+/* Header start */
+.header {
+  position: relative;
+}
+
+.header-bg {
+  height: 10rem;
+  background-image: url(/assets/img/00LogodanNavigasi/navigasi.svg);
+  background-position: center;
+  background-size: cover;
+  filter: blur(5px);
+  position: relative;
+  left: 0;
+}
+
+.header-content {
+  width: 100%;
+  height: 10rem;
+  background: rgba(0, 0, 0, 0.34);
+  color: var(--heading-color);
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+}
+/* Header end */
+
+/* Navbar start */
+.navbar {
+  background-color: var(--navbar-color);
+  backdrop-filter: blur(20px);
+  position: relative;
+  z-index: 1;
+}
+
+.show {
+  background-color: transparent;
+  border: none;
+}
+.nav-link {
+  color: var(--navbar-text-color);
+}
+.nav-link:hover {
+  color: #000;
+  border-radius: 10%;
+  font-weight: bolder;
+}
+.btn-login {
+  background: var(--button-color);
+  border-radius: 10px;
+  color: var(--button-text-color);
+}
+
+.active {
+  background-color: var(--body-color);
+  font-weight: bolder;
+}
+.active:hover {
+  color: #000;
+  font-weight: normal;
+  border-radius: 10%;
+}
+
+.btn-login:hover {
+  background-color: var(--heading-color);
+  font-weight: bolder;
+  border-radius: 10%;
+  border: none;
+}
+.navbar-toggler {
+  background-color: var(--main-color);
+}
+.navbar-toggler-icon {
+  color: var(--secondary-color);
+}
+/* Navbar end */
+
+/* section-data-anggota-pembina-pelatih-pamong start */
+.data-anggota-pembina {
+  position: relative;
+}
+
+/* Data-anggota start */
+.title-anggota {
+  font-family: var(--body-font);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  color: var(--secondary-color);
+}
+
+/* Data-anggota end */
+
+/* memphis start */
+.top-memphis {
+  background-image: url(/assets/img/08memphis/mp-1.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  width: 100px;
+  height: 82px;
+  right: 0;
+  top: 0;
+  z-index: -100;
+}
+.bottom-memphis-right {
+  background-image: url(/assets/img/08memphis/mp-3.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  width: 220px;
+  height: 395px;
+  right: 0;
+  bottom: 0;
+  z-index: -100;
+}
+.bottom-memphis-left {
+  background-image: url(/assets/img/08memphis/mp-2.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+  position: absolute;
+  width: 200px;
+  height: 75px;
+  left: 0;
+  bottom: 0;
+  z-index: -100;
+}
+
+/* memphis end*/
+
+/* section-data-anggota-pembina-pelatih-pamong end */
+
+/* contact start */
+.contact img {
+  width: 70px;
+  height: 60px;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  overflow: hidden;
+}
+.contact img:hover {
+  width: 90px;
+  height: 80px;
+  transition: all 0.2s ease;
+}
+/* contact end */
+
+/* Footer start */
+.footer {
+  background-color: var(--navbar-color);
+}
+
+.footer-text {
+  font-weight: 700;
+  font-size: 15px;
+}
+/* Footer end */
+
+/* Responsive start */
+@media screen and (min-width: 1444px) {
+  .slider-anggota {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+}
+@media screen and (max-width: 768px) {
+  .header-logo {
+    width: 7rem;
+  }
+  .header-address,
+  .header-subtitle {
+    display: none;
+  }
+  .header-content {
+    align-items: center;
+  }
+}
+@media screen and (min-width: 601px) {
+  .slider-anggota {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  /* header */
+
+  .header-text {
+    display: none;
+  }
+  .header-content {
+    place-content: center;
+  }
+
+  /* navbar */
+  .navbar {
+    padding: 10px;
+    border-radius: 0 0 10% 10%;
+  }
+
+  /* section-anggota */
+  .section-anggota {
+    display: none;
+  }
+  .title-anggota {
+    font-size: 20px;
+  }
+}
+
+/* Responsive end */

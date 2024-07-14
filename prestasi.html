@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SIPANDU | Prestasi</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/prestasi.css" />
+
+    <!-- aos animation-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Datatable CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap4.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.3.0/css/responsive.bootstrap4.min.css" />
+  </head>
+  <body>
+    <!-- Header start -->
+    <section class="header">
+      <div class="header-bg"></div>
+      <div class="header-content p-3 d-flex align-items-center">
+        <a href="" class="col-lg-1 col-md-2"><img src="assets/img/00LogodanNavigasi/SIPANDU-logo.svg" alt="" class="header-logo" width="100%" /></a>
+        <div class="header-text col-lg-8">
+          <h2 class="header-title">Sistem Informasi Data Kwarcab Terpadu</h2>
+          <h5 class="header-subtitle">Gerakan Pramuka Kwartir Cabang Sumedang</h5>
+          <address class="header-address">Komplek Lapang Sepak bola Cigugur Sumedang, Kotakulon, Sumedang Selatan, Sumedang, Jawa Barat 45311</address>
+        </div>
+      </div>
+    </section>
+    <!-- Header end -->
+
+    <!-- Navbar start -->
+    <nav class="navbar navbar-expand-lg m-0 p-0">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav m-0">
+            <a class="nav-link mx-md-3 py-3" href="index.html">Beranda</a>
+            <a class="nav-link mx-md-3 py-3" href="kwarcab.html">Profil Kwarcab</a>
+            <a class="nav-link mx-md-3 py-3 py-3" href="berita.html">Berita</a>
+            <a class="nav-link mx-md-3 py-3" href="kwarran.html">Kwartir Ranting</a>
+            <a class="nav-link active mx-md-3 py-3" aria-current="page" href="#">Prestasi</a>
+            <a class="nav-link mx-md-3 py-3" href="jadwal.html">Jadwal Kegiatan</a>
+          </div>
+          <div class="dropdown ms-auto">
+            <button class="btn btn-login ms-auto mx-3 px-5 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Login</button>
+            <ul class="dropdown-menu text-center">
+              <li><a class="dropdown-item btn-login my-1 py-2" href="login-kwarcab.html">Kwarcab</a></li>
+              <li><a class="dropdown-item btn-login my-1 py-2" href="login-kwarran.html">Kwarran</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar end -->
+
+    <!-- section data prestasi start -->
+    <section class="data-prestasi container-fluid">
+      <!-- Data prestasi start -->
+      <div class="section-prestasi pt-5">
+        <div class="container-fluid">
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-8 d-flex justify-content-center">
+              <h1 class="title-prestasi text-center" data-aos="fade-down" data-aos-duration="900" data-aos-delay="200">Daftar Prestasi Kwarcab Sumedang</h1>
+            </div>
+          </div>
+          <div class="row d-flex justify-content-center py-5">
+            <div class="col-md-6 d-flex justify-content-center">
+              <img src="assets/img/06Prestasi/year-prestasi.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Data prestasi end -->
+
+      <!-- Slider data prestasi start -->
+      <div class="slider-prestasi">
+        <!-- Title -->
+        <div class="container">
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-8 d-flex justify-content-center pt-5">
+              <h1 class="title-prestasi text-center">Daftar Prestasi Kwarcab Sumedang</h1>
+            </div>
+          </div>
+        </div>
+        <!-- title -->
+      </div>
+      <!-- Slider data prestasi end -->
+
+      <!-- section data prestasi siaga start -->
+      <section class="data-prestasi-siaga-detail container-fluid">
+        <!-- Data prestasi siaga start -->
+        <div class="data-prestasi-siaga py-5">
+          <div class="container" data-aos="zoom-out" data-aos-duration="900" data-aos-delay="200">
+            <h1 class="title-prestasi-siaga text-center text-md-start" data-aos="fade-right" data-aos-duration="900" data-aos-delay="200">Data Anggota Siaga yang Berprestasi</h1>
+            <table id="siaga" class="table table-striped table-bordered dt-responsive nowrap" style="width: 100%">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>NTA</th>
+                  <th>Nama</th>
+                  <th>Jenis Kelamin</th>
+                  <th>Asal Kwartir Ranting</th>
+                  <th>Golongan</th>
+                  <th>Tingkat Kursus Kepramukaan</th>
+                  <th>Tahun Kursus Terakhir</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>1</th>
+                  <th>11.34.33.88.1615</th>
+                  <th>Cinta Puspita Sari</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Rakit</th>
+                  <th>2020</th>
+                </tr>
+                <tr>
+                  <th>2</th>
+                  <th>11.36.12.69.1680</th>
+                  <th>Darren Style Guntur</th>
+                  <th>Laki-Laki</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Bantu</th>
+                  <th>2021</th>
+                </tr>
+                <tr>
+                  <th>3</th>
+                  <th>11.37.30.66.666</th>
+                  <th>Yasmin Putri Tidur</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Rakit</th>
+                  <th>2018</th>
+                </tr>
+                <tr>
+                  <th>4</th>
+                  <th>11.34.33.88.1115</th>
+                  <th>Indah Permata Sari</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Mula</th>
+                  <th>2022</th>
+                </tr>
+                <tr>
+                  <th>5</th>
+                  <th>11.34.33.88.1115</th>
+                  <th>Indah Permata Sari</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Mula</th>
+                  <th>2022</th>
+                </tr>
+                <tr>
+                  <th>6</th>
+                  <th>11.34.33.88.1615</th>
+                  <th>Cinta Puspita Sari</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Rakit</th>
+                  <th>2020</th>
+                </tr>
+                <tr>
+                  <th>7</th>
+                  <th>11.36.12.69.1680</th>
+                  <th>Darren Style Guntur</th>
+                  <th>Laki-Laki</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Bantu</th>
+                  <th>2021</th>
+                </tr>
+                <tr>
+                  <th>8</th>
+                  <th>11.37.30.66.666</th>
+                  <th>Yasmin Putri Tidur</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Rakit</th>
+                  <th>2018</th>
+                </tr>
+                <tr>
+                  <th>9</th>
+                  <th>11.34.33.88.1115</th>
+                  <th>Indah Permata Sari</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Mula</th>
+                  <th>2022</th>
+                </tr>
+                <tr>
+                  <th>10</th>
+                  <th>11.34.33.88.1115</th>
+                  <th>Indah Permata Sari</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Mula</th>
+                  <th>2022</th>
+                </tr>
+                <tr>
+                  <th>11</th>
+                  <th>11.34.33.88.1615</th>
+                  <th>Cinta Puspita Sari</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Rakit</th>
+                  <th>2020</th>
+                </tr>
+                <tr>
+                  <th>12</th>
+                  <th>11.36.12.69.1680</th>
+                  <th>Darren Style Guntur</th>
+                  <th>Laki-Laki</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Bantu</th>
+                  <th>2021</th>
+                </tr>
+                <tr>
+                  <th>13</th>
+                  <th>11.37.30.66.666</th>
+                  <th>Yasmin Putri Tidur</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Rakit</th>
+                  <th>2018</th>
+                </tr>
+                <tr>
+                  <th>14</th>
+                  <th>11.34.33.88.1115</th>
+                  <th>Indah Permata Sari</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Mula</th>
+                  <th>2022</th>
+                </tr>
+                <tr>
+                  <th>15</th>
+                  <th>11.34.33.88.1115</th>
+                  <th>Indah Permata Sari</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Mula</th>
+                  <th>2022</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- Data prestasi siaga end -->
+      </section>
+      <!-- section data prestasi siaga end -->
+
+      <!-- section data prestasi penggalang start -->
+      <section class="data-prestasi-penggalang-detail container-fluid">
+        <!-- Data prestasi penggalang start -->
+        <div class="data-prestasi-penggalang py-5">
+          <div class="container">
+            <h1 class="title-prestasi-penggalang text-center text-md-start">Data Anggota Penggalang yang Berprestasi</h1>
+            <table id="penggalang" class="table table-striped table-bordered dt-responsive nowrap" style="width: 100%">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>NTA</th>
+                  <th>Nama</th>
+                  <th>Jenis Kelamin</th>
+                  <th>Asal Kwartir Ranting</th>
+                  <th>Golongan</th>
+                  <th>Tingkat Kursus Kepramukaan</th>
+                  <th>Tahun Kursus Terakhir</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>1</th>
+                  <th>11.34.33.88.1615</th>
+                  <th>Cinta Puspita Sari</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Rakit</th>
+                  <th>2020</th>
+                </tr>
+                <tr>
+                  <th>2</th>
+                  <th>11.36.12.69.1680</th>
+                  <th>Darren Style Guntur</th>
+                  <th>Laki-Laki</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Bantu</th>
+                  <th>2021</th>
+                </tr>
+                <tr>
+                  <th>3</th>
+                  <th>11.37.30.66.666</th>
+                  <th>Yasmin Putri Tidur</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Rakit</th>
+                  <th>2018</th>
+                </tr>
+                <tr>
+                  <th>4</th>
+                  <th>11.34.33.88.1115</th>
+                  <th>Indah Permata Sari</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Mula</th>
+                  <th>2022</th>
+                </tr>
+                <tr>
+                  <th>5</th>
+                  <th>11.34.33.88.1115</th>
+                  <th>Indah Permata Sari</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Mula</th>
+                  <th>2022</th>
+                </tr>
+                <tr>
+                  <th>6</th>
+                  <th>11.34.33.88.1615</th>
+                  <th>Cinta Puspita Sari</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Rakit</th>
+                  <th>2020</th>
+                </tr>
+                <tr>
+                  <th>7</th>
+                  <th>11.36.12.69.1680</th>
+                  <th>Darren Style Guntur</th>
+                  <th>Laki-Laki</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Bantu</th>
+                  <th>2021</th>
+                </tr>
+                <tr>
+                  <th>8</th>
+                  <th>11.37.30.66.666</th>
+                  <th>Yasmin Putri Tidur</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Rakit</th>
+                  <th>2018</th>
+                </tr>
+                <tr>
+                  <th>9</th>
+                  <th>11.34.33.88.1115</th>
+                  <th>Indah Permata Sari</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Mula</th>
+                  <th>2022</th>
+                </tr>
+                <tr>
+                  <th>10</th>
+                  <th>11.34.33.88.1115</th>
+                  <th>Indah Permata Sari</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Mula</th>
+                  <th>2022</th>
+                </tr>
+                <tr>
+                  <th>11</th>
+                  <th>11.34.33.88.1615</th>
+                  <th>Cinta Puspita Sari</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Rakit</th>
+                  <th>2020</th>
+                </tr>
+                <tr>
+                  <th>12</th>
+                  <th>11.36.12.69.1680</th>
+                  <th>Darren Style Guntur</th>
+                  <th>Laki-Laki</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Bantu</th>
+                  <th>2021</th>
+                </tr>
+                <tr>
+                  <th>13</th>
+                  <th>11.37.30.66.666</th>
+                  <th>Yasmin Putri Tidur</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Rakit</th>
+                  <th>2018</th>
+                </tr>
+                <tr>
+                  <th>14</th>
+                  <th>11.34.33.88.1115</th>
+                  <th>Indah Permata Sari</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Mula</th>
+                  <th>2022</th>
+                </tr>
+                <tr>
+                  <th>15</th>
+                  <th>11.34.33.88.1115</th>
+                  <th>Indah Permata Sari</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Mula</th>
+                  <th>2022</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- Data prestasi penggalang end -->
+      </section>
+      <!-- section data prestasi penggalang end -->
+
+      <!-- section data prestasi penegak start -->
+      <section class="data-prestasi-penegak-detail container-fluid">
+        <!-- Data prestasi penegak start -->
+        <div class="data-prestasi-penegak py-5">
+          <div class="container">
+            <h1 class="title-prestasi-penegak text-center text-md-start">Data Anggota Penegak yang Berprestasi</h1>
+            <table id="penegak" class="table table-striped table-bordered dt-responsive nowrap" style="width: 100%">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>NTA</th>
+                  <th>Nama</th>
+                  <th>Jenis Kelamin</th>
+                  <th>Asal Kwartir Ranting</th>
+                  <th>Golongan</th>
+                  <th>Tingkat Kursus Kepramukaan</th>
+                  <th>Tahun Kursus Terakhir</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>1</th>
+                  <th>11.34.33.88.1615</th>
+                  <th>Cinta Puspita Sari</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Rakit</th>
+                  <th>2020</th>
+                </tr>
+                <tr>
+                  <th>2</th>
+                  <th>11.36.12.69.1680</th>
+                  <th>Darren Style Guntur</th>
+                  <th>Laki-Laki</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Bantu</th>
+                  <th>2021</th>
+                </tr>
+                <tr>
+                  <th>3</th>
+                  <th>11.37.30.66.666</th>
+                  <th>Yasmin Putri Tidur</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Rakit</th>
+                  <th>2018</th>
+                </tr>
+                <tr>
+                  <th>4</th>
+                  <th>11.34.33.88.1115</th>
+                  <th>Indah Permata Sari</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Mula</th>
+                  <th>2022</th>
+                </tr>
+                <tr>
+                  <th>5</th>
+                  <th>11.34.33.88.1115</th>
+                  <th>Indah Permata Sari</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Mula</th>
+                  <th>2022</th>
+                </tr>
+                <tr>
+                  <th>6</th>
+                  <th>11.34.33.88.1615</th>
+                  <th>Cinta Puspita Sari</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Rakit</th>
+                  <th>2020</th>
+                </tr>
+                <tr>
+                  <th>7</th>
+                  <th>11.36.12.69.1680</th>
+                  <th>Darren Style Guntur</th>
+                  <th>Laki-Laki</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Bantu</th>
+                  <th>2021</th>
+                </tr>
+                <tr>
+                  <th>8</th>
+                  <th>11.37.30.66.666</th>
+                  <th>Yasmin Putri Tidur</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Rakit</th>
+                  <th>2018</th>
+                </tr>
+                <tr>
+                  <th>9</th>
+                  <th>11.34.33.88.1115</th>
+                  <th>Indah Permata Sari</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Mula</th>
+                  <th>2022</th>
+                </tr>
+                <tr>
+                  <th>10</th>
+                  <th>11.34.33.88.1115</th>
+                  <th>Indah Permata Sari</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Mula</th>
+                  <th>2022</th>
+                </tr>
+                <tr>
+                  <th>11</th>
+                  <th>11.34.33.88.1615</th>
+                  <th>Cinta Puspita Sari</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Rakit</th>
+                  <th>2020</th>
+                </tr>
+                <tr>
+                  <th>12</th>
+                  <th>11.36.12.69.1680</th>
+                  <th>Darren Style Guntur</th>
+                  <th>Laki-Laki</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Bantu</th>
+                  <th>2021</th>
+                </tr>
+                <tr>
+                  <th>13</th>
+                  <th>11.37.30.66.666</th>
+                  <th>Yasmin Putri Tidur</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Rakit</th>
+                  <th>2018</th>
+                </tr>
+                <tr>
+                  <th>14</th>
+                  <th>11.34.33.88.1115</th>
+                  <th>Indah Permata Sari</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Mula</th>
+                  <th>2022</th>
+                </tr>
+                <tr>
+                  <th>15</th>
+                  <th>11.34.33.88.1115</th>
+                  <th>Indah Permata Sari</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Mula</th>
+                  <th>2022</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- Data prestasi penegak end -->
+      </section>
+      <!-- section data prestasi penegak end -->
+
+      <!-- section data prestasi pandega start -->
+      <section class="data-prestasi-pandega-detail container-fluid">
+        <!-- Data prestasi pandega start -->
+        <div class="data-prestasi-pandega py-5">
+          <div class="container">
+            <h1 class="title-prestasi-pandega text-center text-md-start">Data Anggota Pandega yang Berprestasi</h1>
+            <table id="pandega" class="table table-striped table-bordered dt-responsive nowrap" style="width: 100%">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>NTA</th>
+                  <th>Nama</th>
+                  <th>Jenis Kelamin</th>
+                  <th>Asal Kwartir Ranting</th>
+                  <th>Golongan</th>
+                  <th>Tingkat Kursus Kepramukaan</th>
+                  <th>Tahun Kursus Terakhir</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>1</th>
+                  <th>11.34.33.88.1615</th>
+                  <th>Cinta Puspita Sari</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Rakit</th>
+                  <th>2020</th>
+                </tr>
+                <tr>
+                  <th>2</th>
+                  <th>11.36.12.69.1680</th>
+                  <th>Darren Style Guntur</th>
+                  <th>Laki-Laki</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Bantu</th>
+                  <th>2021</th>
+                </tr>
+                <tr>
+                  <th>3</th>
+                  <th>11.37.30.66.666</th>
+                  <th>Yasmin Putri Tidur</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Rakit</th>
+                  <th>2018</th>
+                </tr>
+                <tr>
+                  <th>4</th>
+                  <th>11.34.33.88.1115</th>
+                  <th>Indah Permata Sari</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Mula</th>
+                  <th>2022</th>
+                </tr>
+                <tr>
+                  <th>5</th>
+                  <th>11.34.33.88.1115</th>
+                  <th>Indah Permata Sari</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Mula</th>
+                  <th>2022</th>
+                </tr>
+                <tr>
+                  <th>6</th>
+                  <th>11.34.33.88.1615</th>
+                  <th>Cinta Puspita Sari</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Rakit</th>
+                  <th>2020</th>
+                </tr>
+                <tr>
+                  <th>7</th>
+                  <th>11.36.12.69.1680</th>
+                  <th>Darren Style Guntur</th>
+                  <th>Laki-Laki</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Bantu</th>
+                  <th>2021</th>
+                </tr>
+                <tr>
+                  <th>8</th>
+                  <th>11.37.30.66.666</th>
+                  <th>Yasmin Putri Tidur</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Rakit</th>
+                  <th>2018</th>
+                </tr>
+                <tr>
+                  <th>9</th>
+                  <th>11.34.33.88.1115</th>
+                  <th>Indah Permata Sari</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Mula</th>
+                  <th>2022</th>
+                </tr>
+                <tr>
+                  <th>10</th>
+                  <th>11.34.33.88.1115</th>
+                  <th>Indah Permata Sari</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Mula</th>
+                  <th>2022</th>
+                </tr>
+                <tr>
+                  <th>11</th>
+                  <th>11.34.33.88.1615</th>
+                  <th>Cinta Puspita Sari</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Rakit</th>
+                  <th>2020</th>
+                </tr>
+                <tr>
+                  <th>12</th>
+                  <th>11.36.12.69.1680</th>
+                  <th>Darren Style Guntur</th>
+                  <th>Laki-Laki</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Bantu</th>
+                  <th>2021</th>
+                </tr>
+                <tr>
+                  <th>13</th>
+                  <th>11.37.30.66.666</th>
+                  <th>Yasmin Putri Tidur</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Rakit</th>
+                  <th>2018</th>
+                </tr>
+                <tr>
+                  <th>14</th>
+                  <th>11.34.33.88.1115</th>
+                  <th>Indah Permata Sari</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Mula</th>
+                  <th>2022</th>
+                </tr>
+                <tr>
+                  <th>15</th>
+                  <th>11.34.33.88.1115</th>
+                  <th>Indah Permata Sari</th>
+                  <th>Perempuan</th>
+                  <th>Situraja</th>
+                  <th>Siaga</th>
+                  <th>Mula</th>
+                  <th>2022</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- Data prestasi pandega end -->
+      </section>
+      <!-- section data prestasi pandega end -->
+
+      <!-- memphis start -->
+      <div class="top-memphis"></div>
+      <div class="bottom-memphis-right"></div>
+      <div class="bottom-memphis-left"></div>
+      <!-- memphis end -->
+    </section>
+    <!-- section data prestasi end -->
+
+    <!-- contact start -->
+    <a href="https://wa.me/6285723977288" class="contact sticky-bottom"><img src="assets/img/00LogodanNavigasi/whatsapp logo.png" alt="" /></a>
+    <!-- contact end -->
+
+    <!-- Footer start -->
+    <footer class="footer py-3">
+      <div class="container-fluid">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="col-md-12 d-flex justify-content-center align-items-center">
+            <div class="footer-text">Copyright SIPANDU 2022 | All Reserved</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer end -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <!-- Datatable JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.3.0/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.3.0/js/responsive.bootstrap4.min.js"></script>
+
+    <!-- aos animation -->
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- inner Script -->
+    <script>
+      $(document).ready(function () {
+        $("#siaga").DataTable();
+      });
+      $(document).ready(function () {
+        $("#penggalang").DataTable();
+      });
+      $(document).ready(function () {
+        $("#penegak").DataTable();
+      });
+      $(document).ready(function () {
+        $("#pandega").DataTable();
+      });
+    </script>
+  </body>
+</html>
